@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangover by LVRN | Official Booking</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --text-main: #ffffff;
+            --accent-green: #25D366; /* WhatsApp */
+            --accent-pink: #E1306C;  /* Instagram */
+            --accent-blue: #4285F4;  /* Maps */
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            /* Use the Holi Background you liked */
+            background: #0b0b0b url('https://i.ibb.co/C5fLz8z/holi-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Container */
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--glass-border);
+            border-radius: 28px;
+            padding: 40px 24px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 130px;
+            height: 130px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 12px;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 0 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .event-info {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Button Logic */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            background: #fff;
+            color: #000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* The "Pop" Hover Effect */
+        @media (hover: hover) {
+            .btn:hover {
+                transform: translateY(-4px) scale(1.03);
+                box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+                filter: brightness(1.05);
+            }
+        }
+
+        /* Mobile Tap Feedback */
+        .btn:active {
+            transform: scale(0.96);
+            filter: brightness(0.9);
+        }
+
+        /* Specific Brand Colors */
+        .btn-wa { background: var(--accent-green); color: #fff; }
+        .btn-ig { background: var(--accent-pink); color: #fff; }
+        .btn-maps { background: var(--accent-blue); color: #fff; }
+
+        .website-link {
+            display: inline-block;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.6;
+            border-bottom: 1px solid transparent;
+            transition: opacity 0.3s;
+        }
+        
+        .website-link:hover { opacity: 1; border-bottom: 1px solid #fff; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.ibb.co/L8v8z8z/lvrn-logo.png" alt="LVRN Experience" class="logo">
+
+        <h1>Rangover 2026</h1>
+        <div class="event-info">
+            3rd March • 10:00 AM Onwards<br>
+            Sapphire Dome, BMG Ground, Goregaon West
+        </div>
+
+        <a href="https://in.bookmyshow.com/activities/rangover-holi-like-never-before/ET00488170" class="btn" target="_blank">
+            Book on BookMyShow
+        </a>
+
+        <a href="https://link.district.in/DSTRKT/lq6j1z8w" class="btn" target="_blank">
+            Book on District (Zomato)
+        </a>
+
+        <a href="https://wa.me/919372205935?text=Hi!%20I'm%20interested%20in%20Group%20Bookings%20for%20Rangover" class="btn btn-wa" target="_blank">
+            WhatsApp for Group Discounts
+        </a>
+
+        <a href="https://www.instagram.com/lvrn.experience" class="btn btn-ig" target="_blank">
+            Follow on Instagram
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Sapphire+Dome+BMG+Ground+Goregaon+West" class="btn btn-maps" target="_blank">
+            Navigate to Venue
+        </a>
+
+        <a href="https://www.lvrnexperience.com/" class="website-link">lvrnexperience.com</a>
+    </div>
+
+</body>
+</html>
